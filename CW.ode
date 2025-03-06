@@ -1,0 +1,19 @@
+# ODE for Coursework
+
+
+x' = ((1 + x^2 + a*s*x^4) / (1 + x^2 + s*x^4) * (1 + y^4)) - gx*x
+y' = (((1 + x^2 + a*s*x^4) / (1 + x^2 + s*x^4) * (1 + y^4)) - gy*y) / ty
+
+
+# Suggested fixed parameters from FIG. 2.
+par a = 11, s = 2, ty = 5, gx = 0.105, gy = 0.038
+
+
+init x=0.5, y=0.5
+
+@ total=100
+@ maxstor=500000
+@ bounds=1e3
+@ dt=.05
+
+done
